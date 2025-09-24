@@ -50,11 +50,12 @@ export default function Index() {
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
       <View style={styles.container}>
         <Text style={styles.title}>Contador de Pessoas</Text>
+
         
         <Text
           style={[
             styles.counter,
-            count >= limit && { color: "red" }, // muda pra vermelho
+            count >= limit && { color: "purple" },
           ]}
         >
           {count}
@@ -83,7 +84,7 @@ export default function Index() {
           value={limit.toString()}
           onChangeText={(text) => setLimit(Number(text))}
         />
-        <Text style={styles.limitText}> Limite atual: {limit}</Text>
+        <Text style={styles.limitText}>Limite atual: {limit}</Text>
       </View>
     </TouchableWithoutFeedback>
   );
@@ -125,7 +126,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   resetButton: {
-    backgroundColor: "#BB86FC", // cor diferente pro reset
+    backgroundColor: "#BB86FC",
     marginBottom: 20,
   },
   buttonText: {
@@ -150,4 +151,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
 });
+
+
+
 
